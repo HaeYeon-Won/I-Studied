@@ -3,7 +3,9 @@
 -   RDBMS의 한계를 극복하기 위해 만들어진 새로운 형태의 데이터저장소
 -   RDBMS처럼 고정된 스키마 및 JOIN 이 존재하지 않음
 -   스키마 변경? ALERT 등 필요 없음
-![nosql] (./image/nosql.png)
+![nosql] (https://user-images.githubusercontent.com/73468962/148645995-1bbbc8fb-a042-4d75-af05-a4ee8fdebfa8.png)
+
+
 
 # Why NoSQL?
 
@@ -42,7 +44,7 @@
 -   RDBMS의 table이 아니라, collection 에 JSON 형태의 Document를 넣습니다.
 -   Document 하나가 하나의 로우(레코드)임
 
-![nosql] (./image/mongodb.png)
+![nosql] (https://user-images.githubusercontent.com/73468962/148645993-eb214ba5-3afb-4973-bb2c-f4889e79a8e5.png)
 
 #### MongoDB Database[](https://www.fun-coding.org/mongodb_basic1.html#MongoDB-Database)
 
