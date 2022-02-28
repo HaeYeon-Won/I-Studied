@@ -1,5 +1,4 @@
 import java.lang.Math;
-import java.util.Arrays;
 public class Pos 
 {
 	public int x;
