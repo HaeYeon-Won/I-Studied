@@ -2,7 +2,7 @@
 - Project : Calculrate distance from pos 
 - 초기좌표와 10개의 좌표를 입력받아(중복허용x), 두 점 사이의 거리가 가장 짧은 값을 구해주는 프로그램
 - Author : Hae-Yeon-Won
-- Date of last update : 2022.02.28.
+- Date of last update : 2022.02.28.
 */
 import java.util.Scanner;
 public class main {
@@ -40,7 +40,7 @@ public class main {
 			}
 			else
 			{
-				pNext.distance = pNext.getDistance(pNow);
+				pNext.distance = pNow.getDistance(pNext);
 				positions[i].update(pNext.x, pNext.y, pNext.distance);
 				if (pNext.distance<minVal)
 				{
