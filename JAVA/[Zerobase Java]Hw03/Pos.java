@@ -18,6 +18,12 @@ public class Pos
 		this.y=y;
 		this.distance=0;
 	}
+	public void update(int x, int y, double distance)
+	{
+		this.x =x;
+		this.y =y;
+		this.distance=distance;
+	}
 	public double getDistance(Pos p) 
 	{
 		// Math.pow() <- 제곱
@@ -29,11 +35,6 @@ public class Pos
 		d = Math.sqrt(yd+xd);
 		return d;
 	}
-	public void printPos()
-	{
-		System.out.printf("(%d, %d) => %f\n", this.x, this.y, this.distance);
-	}
-	
 	public boolean isExist(Pos[] pos, int round)
 	{
 		for(int i=0;i<round;i++)
@@ -46,11 +47,10 @@ public class Pos
 		return false;
 
 	}
-	public void update(int x, int y, double distance)
+	public void printPos()
 	{
-		this.x =x;
-		this.y =y;
-		this.distance=distance;
+		System.out.printf("(%d, %d) => %f\n", this.x, this.y, this.distance);
 	}
+	
 	
 }
