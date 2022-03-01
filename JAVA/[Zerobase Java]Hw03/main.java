@@ -12,6 +12,7 @@ public class main {
 		Pos pNow = new Pos();
 		Pos pNext = new Pos();
 		Pos[] positions = new Pos[10];
+		double[] distance = new double[10];
 		double minVal=Double.MAX_VALUE;
 		int minIdx = 0;
 		int i=0;
@@ -40,11 +41,12 @@ public class main {
 			}
 			else
 			{
-				pNext.distance = pNow.getDistance(pNext);
-				positions[i].update(pNext.x, pNext.y, pNext.distance);
-				if (pNext.distance<minVal)
+				distance[i] = pNext.getDistance(pNow);
+				positions[i].x=pNext.x;
+				positions[i].y=pNext.y;
+				if (distance[i]<minVal)
 				{
-					minVal=pNext.distance;
+					minVal=distance[i];
 					minIdx=i;
 				}
 				i++;
@@ -53,9 +55,10 @@ public class main {
 		for(int j=0;j<10;j++)
 		{
 			positions[j].printPos();
+			System.out.println(" => "+String.valueOf(distance[j]));
 		}
 		System.out.println("제일 가까운 좌표:");
-		System.out.printf("(%d, %d) => %f\n", positions[minIdx].x, positions[minIdx].y, positions[minIdx].distance);
+		System.out.printf("(%d, %d) => %f\n", positions[minIdx].x, positions[minIdx].y, distance[minIdx]);
 	}
 
 }
