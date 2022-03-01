@@ -3,26 +3,18 @@ public class Pos
 {
 	public int x;
 	public int y;
-	public double distance;
 	
 	public void Pos() 
 	{
 		this.x=0;
 		this.y=0;
-		this.distance=0;
 	}
 	public void Pos(int x, int y) 
 	{
 		this.x=x;
 		this.y=y;
-		this.distance=0;
 	}
-	public void update(int x, int y, double distance)
-	{
-		this.x =x;
-		this.y =y;
-		this.distance=distance;
-	}
+	
 	public double getDistance(Pos p) 
 	{
 		// Math.pow() <- 제곱
@@ -48,7 +40,7 @@ public class Pos
 	}
 	public void printPos()
 	{
-		System.out.printf("(%d, %d) => %f\n", this.x, this.y, this.distance);
+		System.out.printf("(%d, %d)", this.x, this.y);
 	}
 	
 	
