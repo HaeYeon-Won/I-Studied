@@ -34,7 +34,7 @@
     * 인접 행렬 예제: ([Python 3.7 코드](/5/6.py) / [C++ 코드](/5/6.cpp) / [Java 코드](/5/6.java))
     * 인접 리스트 예제: ([Python 3.7 코드](/5/7.py) / [C++ 코드](/5/7.cpp) / [Java 코드](/5/7.java))
     * DFS: ([Python 3.7 코드](/5/8.py) / [C++ 코드](/5/8.cpp) / [Java 코드](/5/8.java))
-    * BFS: ([Python 3.7 코드](/DFS%2CBFS/02.py))
+    * BFS: ([Python 3.7 코드](/DFS,BFS/02.py))
 * 실전
     * 음료수 얼려 먹기: ([Python 3.7 코드](/5/10.py) / [C++ 코드](/5/10.cpp) / [Java 코드](/5/10.java))
     * 미로 탈출: ([Python 3.7 코드](/5/11.py) / [C++ 코드](/5/11.cpp) / [Java 코드](/5/11.java))
