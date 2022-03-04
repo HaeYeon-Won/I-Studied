@@ -81,6 +81,4 @@ zip, map, join, lambda
 >>> dict(zip(["year", "month", "date"], [2001, 1, 31]))
 >>>{'year': 2001, 'month': 1, 'date': 31}
 ```
-```
-```
-```
+
