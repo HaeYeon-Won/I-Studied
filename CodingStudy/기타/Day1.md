@@ -1,9 +1,9 @@
 # Study 1일차
 
-정리해야하는 사항 
-zip, map, join, lambda
+## 정리해야하는 사항 
+### zip, map, join, lambda
 - zip
->1. 기본사용법 
+1. 기본사용법 
 >zip() 함수는 여러 개의 순회 가능한(iterable한) 객체를 인자로 받고, 각 객체가 담고 있는 원소를 튜플의 형태로 차례로 접근할 수 있는 반복자(iterator)를 반환.
 >예제 코드
 >(1) zip 함수를 사용
@@ -31,7 +31,7 @@ zip, map, join, lambda
 >>>(2, 'B')
 >>>(3, 'C'))
 
->2. 병렬처리
+2. 병렬처리
 >zip() 함수를 활용하면 여러 그룹의 데이터를 루프를 한번만 돌면서 처리가능. 가변인자를 받기 때문에 2개 이상의 인자를 넘겨서 병렬 처리 가능.
 >예제 코드
 >```py
@@ -44,7 +44,7 @@ zip, map, join, lambda
 >>>4 D d
 >>>5 E e
 
->3. unzip()
+3. unzip()
 >zip() 함수로 엮어 놓은 데이터를 다시 해제
 >예제 코드
 >먼저  `zip()`  함수로 2개의 터플의 데이터를 엮은 후 리스트로 변환.
@@ -66,7 +66,7 @@ zip, map, join, lambda
 >>> letters
 >>>('A', 'B', 'C')
 ```
->4.  사전 변환
+4.  사전 변환
 > `zip()`  함수를 이용하면 두 개의 리스트나 터플 부터 쉽게 사전(dictionary)을 만들 수 있음. 키를 담고 있는 리스트와 값을 담고 있는 리스트를  `zip()`  함수에 넘긴 후, 그 결과를 다시  `dict()`  함수에 넘기면 됨.
 
 ```py
@@ -81,4 +81,52 @@ zip, map, join, lambda
 >>> dict(zip(["year", "month", "date"], [2001, 1, 31]))
 >>>{'year': 2001, 'month': 1, 'date': 31}
 ```
+- map
+1. 기본사용법 
+>map(function, iterable)
+- 첫 번째 매개변수로는 함수가 오고
+- 두 번째 매개변수로는 반복 가능한 자료형(리스트, 튜플등)이 온다.
+- map 함수의 반환값은 map 객체이므로 해당 자료형을 list 또는 tuple로 변환해야함.
+- 함수의 동작은  두 번째 인자로 들어온 반복 가능한 자료형 (리스트나 튜플)을  첫 번째 인자로 들어온 함수에 하나씩 집어넣어서 함수를 수행하는  함수.
 
+map(적용시킬 함수, 적용할 값들) 와 같다고 보면 된다. 
+- 예를 들어 첫 번째 인자가 값에 +1을 더해주는 함수라고 하고 두번째 인자에 [1, 2, 3, 4, 5] 라는 리스트를 집어넣는다 가정한다.
+
+즉
+map( 값에 +1 을 더해주는 함수, [1,2,3,4,5])  
+함수의 반환을 list(. )로 감싸주면  
+**[2,3,4,5,6]**  이 되는 함수.
+
+>예제 코드
+```py
+# 리스트에 값을 하나씩 더해서 새로운 리스트를 만드는 작업 
+myList = [1, 2, 3, 4, 5] 
+# for 반복문 이용 
+result1 = [] for val in myList: 
+	result1.append(val + 1) print(f'result1 :  {result1}') 
+
+# map 함수 이용  
+def  add_one(n):  
+	return n + 1 result2 = list(map(add_one, myList)) 
+	# map반환을 list 로 변환 
+	print(f'result2 :  {result2}')  
+  
+
+>출력 결과
+>>>result1 : [2, 3, 4, 5, 6]
+>>>result2 : [2, 3, 4, 5, 6]
+
+
+# map 과 lambda  # 일반 함수 이용  
+def  func_mul(x):  
+	return x * 2 result1 = list(map(func_mul, [5, 4, 3, 2, 1])) 
+	print(f"map(일반함수, 리스트) :  {result1}") 
+
+# 람다 함수 이용 
+result2 = list(map(lambda x: x * 2, [5, 4, 3, 2, 1])) 
+print(f"map(람다함수, 리스트) :  {result2}")  
+
+>출력 결과
+>>>result1 : [10, 8, 6, 4, 2]
+>>>result2 : [10, 8, 6, 4, 2]
+```
