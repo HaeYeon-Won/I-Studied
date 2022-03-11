@@ -7,9 +7,13 @@
 길이가 K인 수열 A가 A1 ≤ A2 ≤ ... ≤ AK-1 ≤ AK를 만족하면, 비내림차순이라고 한다.
 """
 from collections import deque
+def printQue(q):
+    for i in q:
+        print(i, end = " ")
+    return
 def solution(start):
     if len(q)==m:
-        print(" ".join(map(str, q)))
+        printQue(q)
         return
     for i in range(start, n+1):
         q.append(i)
