@@ -7,6 +7,7 @@ from collections import deque
 def printQue(q):
     for i in q:
         print(i, end = " ")
+    print()
     return
         
 def solution():
