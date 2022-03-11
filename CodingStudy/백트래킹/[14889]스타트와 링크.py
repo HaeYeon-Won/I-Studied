@@ -21,25 +21,25 @@ i\j	1	2	3	4
 축구를 재미있게 하기 위해서 스타트 팀의 능력치와 링크 팀의 능력치의 차이를 최소로 하려고 한다. 위의 예제와 같은 경우에는 1, 4번이 스타트 팀, 2, 3번 팀이 링크 팀에 속하면 스타트 팀의 능력치는 6, 링크 팀의 능력치는 6이 되어서 차이가 0이 되고 이 값이 최소이다.
 """
 from collections import deque
-def getPoint(q):
+def getPoint(q): # 생성된 팀의 점수를 계산해주는 함수
     score=0
     for i in range(len(q)):
         for j in range(i+1, len(q)):
            score+=(data[q[i]][q[j]]+data[q[j]][q[i]])
     return score
 
-def solution(start, points):
+def solution(start, points): #팀을 만들 수 있는 모든 경우를 생성하는 함수
     if len(q)==team:
         points.append(getPoint(q))
         return
     for i in range(start, n):
         q.append(i)
-        solution(i+1, points)
+        solution(i+1, points) #재귀함수에 전달해주는 파라미터에 따라 순열, 조합, 중복순열, 중복조합 모두 표현 
         q.pop()
 
 if __name__ =="__main__":
     n = int(input())
-    team = n//2
+    team = n//2 #팀의 구성원 수는 총인원/2
     data = [list(map(int, input().split())) for _ in range(n)]
     points=[]
     q=deque()
