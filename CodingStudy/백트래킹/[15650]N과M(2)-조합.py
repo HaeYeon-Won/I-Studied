@@ -5,9 +5,14 @@
 고른 수열은 오름차순이어야 한다.
 """
 from collections import deque
+
+def printQue(q):
+    for i in q:
+        print(i, end = " ")
+        
 def solution(start):
     if len(q)==m:
-        print(" ".join(map(str, q)))
+        printQue(q)
         return
     for i in range(start, n+1):
         if i not in q: #중복 방지 조건
