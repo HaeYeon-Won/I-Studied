@@ -5,11 +5,11 @@
 """
 from collections import deque
 def solution():
-    if len(q)==m:
+    if len(q)==m: #정해진 길이가 되면 해당 수 출력
         print(" ".join(map(str, q)))
         return
     for i in range(1, n+1):
-        if i not in q:
+        if i not in q: #중복허용 방지 조건
             q.append(i)
             solution()
             q.pop()
