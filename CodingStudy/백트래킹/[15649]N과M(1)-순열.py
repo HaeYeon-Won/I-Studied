@@ -4,9 +4,13 @@
 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
 """
 from collections import deque
+def printQue(q):
+    for i in q:
+        print(i, end = " ")
+        
 def solution():
     if len(q)==m: #정해진 길이가 되면 해당 수 출력
-        print(" ".join(map(str, q)))
+        printQue(q)
         return
     for i in range(1, n+1):
         if i not in q: #중복허용 방지 조건
