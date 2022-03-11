@@ -10,9 +10,9 @@ def solution(start):
         print(" ".join(map(str, q)))
         return
     for i in range(start, n+1):
-        if i not in q:
+        if i not in q: #중복 방지 조건
             q.append(i)
-            solution(i+1)
+            solution(i+1) # 순열과 다르게 (1,2)와 (2,1)을 같은것으로 봄. 따라서 재귀마다 start를 증가시켜 중복을 피함
             q.pop()
 
 if __name__ =="__main__":
