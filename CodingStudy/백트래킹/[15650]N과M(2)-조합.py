@@ -9,6 +9,7 @@ from collections import deque
 def printQue(q):
     for i in q:
         print(i, end = " ")
+    return
         
 def solution(start):
     if len(q)==m:
