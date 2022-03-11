@@ -7,6 +7,7 @@ from collections import deque
 def printQue(q):
     for i in q:
         print(i, end = " ")
+    return
         
 def solution():
     if len(q)==m: #정해진 길이가 되면 해당 수 출력
