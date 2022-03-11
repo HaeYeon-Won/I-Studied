@@ -5,9 +5,13 @@
 같은 수를 여러 번 골라도 된다.
 """
 from collections import deque
+def printQue(q):
+    for i in q:
+        print(i, end = " ")
+    return
 def solution():
     if len(q)==m:
-        print(" ".join(map(str, q)))
+        printQue(q)
         return
     for i in range(1, n+1):
         q.append(i)
