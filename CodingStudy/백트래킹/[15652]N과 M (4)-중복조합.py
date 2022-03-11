@@ -20,3 +20,22 @@ if __name__ =="__main__":
     n,m = map(int, input().split())
     q = deque()
     solution(1)
+
+    
+
+"""
+     중복 조합이란?
+중복 가능한 n개 중에 r개를 선택하는 경우의 수(순서 X)를 말한다.
+- combinations_with_replacement 함수를 이용한 코드 구현
+
+from itertools import combinations_with_replacement
+
+data = [1, 2, 3, 4]
+
+for x in combinations_with_replacement(data, 2):
+    print(x, end=" ")
+
+
+# 결과
+(1, 1) (1, 2) (1, 3) (1, 4) (2, 2) (2, 3) (2, 4) (3, 3) (3, 4) (4, 4)
+"""
