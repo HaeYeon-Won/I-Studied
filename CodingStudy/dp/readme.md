@@ -4,6 +4,7 @@
 - 최장 공통 부분수열을 뜻함.
 - 문자열 **ABCDEF**와 **GBCDFE** 로 예시를 들어보면
 ![1](https://user-images.githubusercontent.com/73468962/158317134-2ce2afb9-b9a8-4140-9dd1-68c634f8e309.png)
+
 LCS = "BCDF", "BCDE"
 - 점화식
 ```python
