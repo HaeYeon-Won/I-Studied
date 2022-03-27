@@ -38,6 +38,7 @@ def solution(R, C, T, arr):
         for i in range(R):
             for j in range(C):
                 arr[i][j]+=temp[i][j]
+                
         #2. 공기청정기가 작동한다.
         #위쪽 공기청정기
         #오른쪽 회전, 위로 회전, 왼쪽 회전, 아래로 회전
@@ -59,6 +60,7 @@ def solution(R, C, T, arr):
             uq.append([ux,uy, arr[ux][uy]])
             arr[ux][uy]=unow
         arr[AirCleaner[0][0]][AirCleaner[0][1]]=-1
+        
         #아래쪽 공기청정기
         #오른쪽 회전, 아래로 회전, 왼쪽회전, 위로 회전
         AirDown = ((0, 1), (1, 0), (0, -1), (-1, 0))
