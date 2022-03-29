@@ -6,7 +6,7 @@
 ![image](https://user-images.githubusercontent.com/73468962/160547141-4416b8c9-f372-4915-9343-bb16780e71c9.png)
 
 #순열
-
+- ex. [1,2,3,4], 길이:2 => (1,2),(1,3),(1,4),(2,1),(2,3) . . .(4,3)
 ```py
 from collections import deque
 def permutation():
@@ -20,7 +20,8 @@ def permutation():
             q.pop()
 ```
 
-#순열
+#조합
+- ex. [1,2,3,4], 길이:2 => (1,2),(1,3),(1,4),(2,3), (2,4), (3,4)
 ```py
 from collections import deque
 def Combination(start):
