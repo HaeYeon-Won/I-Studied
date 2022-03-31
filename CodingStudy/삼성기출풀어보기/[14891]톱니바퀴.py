@@ -30,7 +30,7 @@ def rotate(data, target, d):
         else:
             break
     d = temp_d
-    for i in range(target-1, -1, -1):
+    for i in range(target-1, -1, -1): #왼쪽
         d *= -1
         if nowL != data[i][right]:
             nowL = data[i][left]
