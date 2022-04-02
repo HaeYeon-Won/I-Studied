@@ -25,7 +25,7 @@ def solution(n, q, operator, check, data):
             continue
         q.append(operator[i])
         check[i]=True
-        permutation(n,q,operator,check, data)
+        solution(n,q,operator,check, data)
         q.pop()
         check[i]=False
 
